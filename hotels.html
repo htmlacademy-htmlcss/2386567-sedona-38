@@ -33,28 +33,28 @@
             </a>
           </li>
           <li class="navigation-item">
-            <input class="search-button" type="button" value="ХОЧУ СЮДА!">
+            <button class="search-button" type="submit">Хочу сюда!</button>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main-inner">
-      <header class="inner-header">
-        <h1 class="inner-header-title">Гостиницы Седоны</h1>
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html">
-              <span class="visually-hidden">Главная</span>
-            </a>
-          </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Гостиницы</a>
-          </li>
-        </ul>
-      </header>
       <section class="search">
+        <header class="inner-header">
+          <h1 class="inner-header-title">Гостиницы Седоны</h1>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link" href="index.html">
+                <span class="visually-hidden">Главная</span>
+              </a>
+            </li>
+            <li class="breadcrumbs-item">
+              <a class="breadcrumbs-link">Гостиницы</a>
+            </li>
+          </ul>
+        </header>
         <h2 class="visually-hidden">Параметры поиска</h2>
-        <form class="price-form" action="https://echo.htmlacademy.ru/" method="post">
+        <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
           <fieldset class="search-list">
             <legend class="search-title">Инфраструктура:</legend>
             <ul>
@@ -76,15 +76,15 @@
             <legend class="search-title">Тип жилья:</legend>
             <ul>
               <li>
-                <input class="search-checkbox" type="radio" name="place-type" id="hotel" checked>
+                <input class="search-checkbox" type="radio" name="place-type" id="hotel" value="hotel" checked>
                 <label class="search-label" for="hotel">Гостиница</label>
               </li>
               <li>
-                <input class="search-checkbox" type="radio" name="place-type" id="motel">
+                <input class="search-checkbox" type="radio" name="place-type" id="motel" value="motel">
                 <label class="search-label" for="motel">Мотель</label>
               </li>
               <li>
-                <input class="search-checkbox" type="radio" name="place-type" id="apartment">
+                <input class="search-checkbox" type="radio" name="place-type" id="apartment" value="apartment">
                 <label class="search-label" for="apartment">Апартаменты</label>
               </li>
             </ul>
@@ -103,17 +103,15 @@
       </section>
       <section class="catalog">
         <h2 class="section-title">Найдено гостиниц: 38</h2>
-        <form class="filter-form" action="https://echo.htmlacademy.ru/" method="post">
-          <select class="filter-select" name="filter-options" aria-label="Сортировка">
-            <option class="filter-select-option" value="cheap">Сначала дешёвые</option>
-            <option class="filter-select-option" value="expensive">Сначала дорогие</option>
-            <option class="filter-select-option" value="high">Сначала высокие оценки</option>
-            <option class="filter-select-option" value="low">Сначала низкие оценки</option>
-            <option class="filter-select-option" value="popular">Сначала популярные</option>
-            <option class="filter-select-option" value="unpopular">Сначала непопулярные</option>
-            <option class="filter-select-option" value="random">В случайном порядке</option>
-          </select>
-        </form>
+        <select class="filter-select" name="filter-options" aria-label="Сортировка">
+          <option class="filter-select-option" value="cheap">Сначала дешёвые</option>
+          <option class="filter-select-option" value="expensive">Сначала дорогие</option>
+          <option class="filter-select-option" value="high">Сначала высокие оценки</option>
+          <option class="filter-select-option" value="low">Сначала низкие оценки</option>
+          <option class="filter-select-option" value="popular">Сначала самые суперпопулярные и мегаактуальные отели города</option>
+          <option class="filter-select-option" value="unpopular">Сначала непопулярные</option>
+          <option class="filter-select-option" value="random">Рандом</option>
+        </select>
         <a class="view-button view-tiles" href="#">
           <span class=visually-hidden>Плитка</span>
         </a>
@@ -130,10 +128,12 @@
               <h3 class="hotels-title">Amara Resort & Spa</h3>
             </a>
             <span class="hotels-type">Гостиница</span>
-            <b class="hotels-price">От 4000 ₽</b>
+            <span class="hotels-price">От 4000 ₽</span>
             <a class="hotels-link-details" href="#">Подробнее</a>
             <button class="featured-button" type="submit">В избранное</button>
             <img class="rating-img" src="#" alt="Отель четыре звезды">
+<!-- Примечание для себя: пока оставлю звёзды так, когда будем делать красиво, подумаю над альтернативным вариантом через спан или список и картинками из css;
+в фигме каждая звезда = отдельная картинка, вариант с добавлением звёзд по одной кажется мне правильным, но имг с информативным альтом проще сделать -->
             <span class="hotels-rating">Рейтинг: 8,5</span>
           </li>
           <li class="hotels-item">
@@ -142,7 +142,7 @@
               <h3 class="hotels-title">Villas at Poco Diablo</h3>
             </a>
             <span class="hotels-type">Гостиница</span>
-            <b class="hotels-price">От 5000 ₽</b>
+            <span class="hotels-price">От 5000 ₽</span>
             <a class="hotels-link-details" href="#">Подробнее</a>
             <button class="featured-button active" type="submit">В избранном</button>
             <img class="rating-img" src="#" alt="Отель четыре звезды">
@@ -154,7 +154,7 @@
               <h3 class="hotels-title">Desert Quail Inn</h3>
             </a>
             <span class="hotels-type">Гостиница</span>
-            <b class="hotels-price">От 2500 ₽</b>
+            <span class="hotels-price">От 2500 ₽</span>
             <a class="hotels-link-details" href="#">Подробнее</a>
             <button class="featured-button" type="submit">В избранное</button>
             <img class="rating-img" src="#" alt="Отель три звезды">
@@ -166,7 +166,7 @@
               <h3 class="hotels-title">GreenTree Inn</h3>
             </a>
             <span class="hotels-type">Гостиница</span>
-            <b class="hotels-price">От 1500 ₽</b>
+            <span class="hotels-price">От 1500 ₽</span>
             <a class="hotels-link-details" href="#">Подробнее</a>
             <button class="featured-button" type="submit">В избранное</button>
             <img class="rating-img" src="#" alt="Отель две звезды">
@@ -229,7 +229,7 @@
       </div>
       <div class="footer-copyright">
         <a class="contacts-academy" href="https://htmlacademy.ru/">
-          <span class="visually-hidden">HTML Academy</span>
+          <img class="navigation-logo-image" src=# alt="HTML Academy">
         </a>
       </div>
     </footer>
