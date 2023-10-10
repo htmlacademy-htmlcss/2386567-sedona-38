@@ -140,11 +140,26 @@ body {
   background-position: center center;
 }
 
+.search-title {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.search-label {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23px;
+}
+
 .button {
   font-family: inherit;
   width: 160px;
   justify-content: center;
   align-items: center;
+  border: 0;
   border-radius: 4px;
   color: #ffffff;
   background-color: #756157;
@@ -153,6 +168,7 @@ body {
   font-weight: 700;
   line-height: 20px;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .pagination-item {
@@ -173,15 +189,24 @@ body {
   color: #000000;
 }
 
-.pagination-link,
-.pagination-other {
+.pagination-skip {
+  background-color: #ffffff;
+}
+
+.pagination-link {
   color: #ffffff;
+  width: 60px;
+  height: 60px;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 36px;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.pagination-other {
+  color: #000000;
 }
 
 .contacts-phone {
@@ -202,7 +227,21 @@ body {
   background-color: #7DB54F;
 }
 
+.subscribe-button {
+  background-color: #82B3D3;
+}
+
 .hotels-rating {
   color: #333333;
   background-color: #F2F2F2;
+}
+
+.section-title-left {
+  justify-content: left;
+}
+
+.breadcrumbs {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
 }

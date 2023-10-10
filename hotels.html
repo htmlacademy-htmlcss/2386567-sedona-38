@@ -104,13 +104,13 @@
           </form>
         </section>
         <section class="catalog">
-          <h2 class="section-title">Найдено гостиниц: 38</h2>
+          <h2 class="section-title section-title-left">Найдено гостиниц: 38</h2>
           <select class="filter-select" name="filter-options" aria-label="Сортировка">
             <option class="filter-select-option" value="cheap">Сначала дешёвые</option>
             <option class="filter-select-option" value="expensive">Сначала дорогие</option>
             <option class="filter-select-option" value="high">Сначала высокие оценки</option>
             <option class="filter-select-option" value="low">Сначала низкие оценки</option>
-            <option class="filter-select-option" value="popular">Сначала самые суперпопулярные и мега-актуальные отели города</option>
+            <option class="filter-select-option" value="popular">Сначала популярные</option>
             <option class="filter-select-option" value="unpopular">Сначала непопулярные</option>
             <option class="filter-select-option" value="random">Рандом</option>
           </select>
@@ -237,8 +237,8 @@
             <li class="pagination-item">
               <a class="pagination-link" href="#">4</a>
             </li>
-            <li class="pagination-item">
-              <span class="pagination-other">...</span>
+            <li class="pagination-item pagination-skip">
+              <span class="pagination-link pagination-other">...</span>
             </li>
             <li class="pagination-item">
               <a class="pagination-link" href="#">10</a>
@@ -251,7 +251,7 @@
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="subscribe-email" class="visually-hidden">e-mail</label>
             <input class="subscribe-input" placeholder="Ваш e-mail" type="email" name="subscribe-email" id="subscribe-email" required>
-            <button class="subscribe-button" type="submit">Подписаться</button>
+            <button class="button subscribe-button" type="submit">Подписаться</button>
           </form>
         </section>
       </main>
