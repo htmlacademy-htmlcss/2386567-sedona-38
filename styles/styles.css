@@ -41,7 +41,7 @@ body {
 
 .page-container {
   width: 1200px;
-  margin: auto;
+  margin: 0 auto;
   background-color: #ffffff;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   display: flex;
@@ -116,7 +116,8 @@ body {
 }
 
 .advantages-list,
-.services-list {
+.services-list,
+.hotels-list {
   text-align: center;
   margin: 0;
   padding: 0;
@@ -153,6 +154,7 @@ body {
   color: #ffffff;
   background-color: #82B3D3;
   width: 100%;
+  display: flex;
 }
 
 .main-subscribe {
@@ -173,7 +175,7 @@ body {
   background-image:  url("../images/filter-background.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: cover;
 }
 
 .search-title {
@@ -190,8 +192,13 @@ body {
   line-height: 23px;
 }
 
+.search-form {
+  display: flex;
+}
+
 .button {
   font-family: inherit;
+  display: inline-block;
   width: 160px;
   justify-content: center;
   align-items: center;
@@ -207,8 +214,11 @@ body {
   text-decoration: none;
 }
 
-.pagination-item {
+.pagination {
   display: flex;
+}
+
+.pagination-item {
   width: 60px;
   height: 60px;
   border-radius: 4px;
@@ -273,11 +283,17 @@ body {
 }
 
 .section-title-left {
-  justify-content: left;
+  text-align: left;
 }
 
 .breadcrumbs {
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
+}
+
+.hotel-one-star {
+  background-image: url("../images/icons/star.svg");
+  background-size: auto;
+  background-repeat: no-repeat;
 }
