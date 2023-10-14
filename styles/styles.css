@@ -93,6 +93,7 @@ body {
 .hero-header {
   display: block;
   margin: 0 auto;
+  padding-top: 52px;
 }
 
 .section-title {
@@ -120,6 +121,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .advantages-title,
@@ -133,10 +135,9 @@ body {
   text-align: center;
 }
 
-.advantages-title {
-  font-size: 24px;
-  line-height: 28px;
-  text-transform: uppercase;
+.advantages-item,
+.services-item {
+  width: 400px;
 }
 
 .advantages-item,
@@ -151,6 +152,7 @@ body {
 .advantages-item-illustrated {
   color: #ffffff;
   background-color: #82B3D3;
+  width: 100%;
 }
 
 .main-subscribe {
