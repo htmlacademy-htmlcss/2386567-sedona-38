@@ -69,9 +69,25 @@ body {
 
 .navigation {
   display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0 70px;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  margin-left: 30px;
+  list-style-type: none;
+}
+
+.navigation-item {
+  display: inline-block;
+  margin: 0;
 }
 
 .navigation-link {
+  display: inline-block;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -79,6 +95,21 @@ body {
   color: #000000;
   text-decoration: none;
   text-transform: capitalize;
+  padding: 16px 20px;
+}
+
+.navigation-items-right {
+  display: flex;
+  margin-left: auto;
+}
+
+.navigation-user {
+  list-style-type: none;
+}
+
+.navigation-item-icons {
+  display: inline-block;
+  padding: 12px 22px;
 }
 
 /*hero*/
@@ -98,11 +129,13 @@ body {
   display: block;
   margin: 0 auto;
   padding-top: 52px;
+  padding-bottom: 82px;
 }
 
 /*sections*/
 
 .section-title {
+  margin: 0;
   color: #000000;
   text-align: center;
   font-weight: 700;
@@ -122,7 +155,6 @@ body {
 }
 
 /*main*/
-
 .advantages-list,
 .services-list {
   text-align: center;
@@ -130,10 +162,12 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  list-style-type: none;
 }
 
 .advantages-title,
 .services-title {
+  color: #000000;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
@@ -146,6 +180,7 @@ body {
 .advantages-item,
 .services-item {
   width: 400px;
+  min-height: 385px;
 }
 
 .advantages-item,
@@ -164,16 +199,12 @@ body {
   display: flex;
 }
 
-.contacts-phone {
-  color: #000000;
-  font-size: 40px;
-  font-style: normal;
-  line-height: 40px;
-  text-decoration: none;
-  text-transform: uppercase;
+.advantages-item-illustrated .advantages-title {
+  color: #ffffff;
 }
 
 .breadcrumbs {
+  display: flex;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
@@ -199,8 +230,18 @@ body {
 
 /*search*/
 
+.inner-header-title {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+  margin: 0;
+}
+
 .search {
   width: 100% auto;
+  margin: 0;
+  padding: 70px;
+  padding-top: 35px;
   color: #ffffff;
   background-color: #606062;
   background-image:  url("../images/filter-background.jpg");
@@ -223,32 +264,30 @@ body {
   line-height: 23px;
 }
 
+.search-options {
+  list-style-type: none;
+}
+
 .search-form {
   display: flex;
+}
+
+.search-buttons {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /*pagination*/
 
 .pagination {
   display: flex;
-}
-
-.pagination-current {
-  background-color: #F2F2F2;
-}
-
-.pagination-current .pagination-link {
-  color: #000000;
-}
-
-.pagination-skip {
-  background-color: #ffffff;
+  list-style-type: none;
 }
 
 .pagination-link {
   display: block;
   color: #ffffff;
-  width: 60px;
+  min-width: 60px;
   height: 60px;
   border-radius: 4px;
   font-size: 20px;
@@ -260,14 +299,22 @@ body {
   background-color: #82B3D3;
 }
 
+.pagination-current,
 .pagination-other {
   color: #000000;
+}
+
+.pagination-other {
+  background-color: #ffffff;
+}
+
+.pagination-current {
+  background-color: #F2F2F2;
 }
 
 /*buttons*/
 
 .button {
-  font-family: inherit;
   display: inline-block;
   width: 160px;
   justify-content: center;
@@ -278,6 +325,7 @@ body {
   width: 140px;
   color: #ffffff;
   background-color: #756157;
+  font-family: inherit;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -295,8 +343,13 @@ body {
   background-color: #7DB54F;
 }
 
-.subscribe-button {
+.subscribe-button,
+.search-submit {
   background-color: #82B3D3;
+}
+
+.search-clear {
+  background-color:  rgba(0, 0, 0, 0);
 }
 
 /*catalog*/
@@ -339,4 +392,37 @@ body {
 
 .section-title-left {
   text-align: left;
+}
+
+/*footer*/
+
+.footer-container {
+  display: flex;
+  width: 100%;
+  margin: 70px;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+
+.contacts-media {
+  display: flex;
+  width: 142px;
+}
+
+.contacts-media-item {
+  display: flex;
+  margin: 0;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-phone {
+  color: #000000;
+  font-size: 40px;
+  font-style: normal;
+  line-height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
