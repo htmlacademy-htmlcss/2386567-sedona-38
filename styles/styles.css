@@ -285,7 +285,7 @@ body {
 }
 
 .pagination-link {
-  display: block;
+  display: flex;
   color: #ffffff;
   min-width: 60px;
   height: 60px;
@@ -296,7 +296,14 @@ body {
   line-height: 36px;
   text-transform: uppercase;
   text-decoration: none;
+  align-items: center;
+  justify-content: center;
   background-color: #82B3D3;
+  margin-right: 8px;
+}
+
+.pagination-link::last-child {
+  margin-right: 0;
 }
 
 .pagination-current,
