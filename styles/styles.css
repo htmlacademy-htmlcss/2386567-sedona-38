@@ -15,6 +15,11 @@
 }
 
 /*base*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -109,7 +114,9 @@ body {
 
 .navigation-item-icons {
   display: inline-block;
-  padding: 12px 22px;
+  width: 44px;
+  height: 64px;
+  margin: 0;
 }
 
 /*hero*/
@@ -128,8 +135,6 @@ body {
 .hero-header {
   display: block;
   margin: 0 auto;
-  padding-top: 52px;
-  padding-bottom: 82px;
 }
 
 /*sections*/
@@ -322,8 +327,8 @@ body {
 /*buttons*/
 
 .button {
+  align-items: center;
   display: inline-block;
-  width: 160px;
   justify-content: center;
   align-items: center;
   border: 0;
@@ -339,6 +344,11 @@ body {
   line-height: 20px;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.search-button {
+  width: 160px;
+  min-height: 36px;
 }
 
 .featured-button {
@@ -404,7 +414,6 @@ body {
 
 .footer-container {
   display: flex;
-  width: 100%;
   margin: 70px;
   margin-top: 40px;
   margin-bottom: 30px;
@@ -414,6 +423,7 @@ body {
 .contacts-media {
   display: flex;
   width: 142px;
+  padding: 0;
 }
 
 .contacts-media-item {
@@ -426,6 +436,7 @@ body {
 
 .contacts-phone {
   color: #000000;
+  margin: 0;
   font-size: 40px;
   font-style: normal;
   line-height: 40px;
