@@ -26,13 +26,14 @@
           <div class="navigation-items-right">
             <ul class="navigation-user">
               <li class="navigation-item-icons">
-                <a class="navigation-link-icons" href=#>
+                <a class="navigation-link-icon-search" href=#>
                   <span class="visually-hidden">Поиск</span>
                 </a>
               </li>
               <li class="navigation-item-icons">
-                <a class="navigation-link-icons" href=#>
+                <a class="navigation-link-icon-featured" href=#>
                   <span class="visually-hidden">Избранное</span>
+                  <span class="count">12</span>
                 </a>
               </li>
             </ul>
@@ -91,7 +92,7 @@
                 </li>
               </ul>
             </fieldset>
-            <fieldset class="search-input">
+            <fieldset class="search-list search-input">
               <legend class="search-title">Стоимость, ₽:</legend>
                 <label class="search-price-label" for="price-start">От</label>
                 <input class="search-input" placeholder="0" type="number" name="price-start" id="price-start" value="0">
@@ -99,8 +100,10 @@
                 <input class="search-input" placeholder="10000" type="number" name="price-end" id="price-end" value="9000">
                 <input type="range" min="0" max="10000" step="1" value="75">
             </fieldset>
-            <button class="button search-submit" type="submit">Применить</button>
-            <button class="button search-clear" type="reset">Сбросить</button>
+            <div class="search-form-buttons">
+              <button class="button search-submit" type="submit">Применить</button>
+              <button class="button search-clear" type="reset">Сбросить</button>
+            </div>
           </form>
         </section>
         <section class="catalog">
