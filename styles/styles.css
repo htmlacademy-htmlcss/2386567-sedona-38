@@ -523,7 +523,7 @@ body {
   margin: 0 auto;
   padding: 0;
   gap: 20px;
-  grid-template-columns: 340px 340px 340px;
+  grid-template-columns: repeat(3, 340px);
 }
 
 .hotels-title {
@@ -573,8 +573,9 @@ body {
 
 .hotels-item {
   display: grid;
-  padding: 20px;
-  gap: 16px;
+  padding: 20px 19px;
+  gap: 16px 20px;
+
   grid-template-rows: 212px 1fr auto auto auto;
   border-radius: 4px;
   border: 1px solid #E6E6E6;
