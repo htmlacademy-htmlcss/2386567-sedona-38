@@ -153,14 +153,24 @@ body {
 }
 
 .count {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
   color: #ffffff;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
   line-height: 10px;
   background-color: #7DB54F;
-  padding: 5px; /*пока так, потом сделаю правильно*/
-  border-radius: 50%;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 10px;
+  position: absolute;
+  top: 11px;
+  right: 254px;
 }
 
 /*hero*/
@@ -267,12 +277,28 @@ body {
 
 .advantages-title,
 .services-title {
+  position: relative;
   color: #000000;
   font-size: 24px;
   line-height: 28px;
   text-transform: uppercase;
   max-width: 175px;
   margin: 0 auto;
+}
+
+.advantages-title::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 2px;
+  background-color:rgba(0, 0, 0, 0.30);
+  bottom: -30px;
+  left: 50%;
+  margin-left: -30px;
+}
+
+.advantages-item-illustrated .advantages-title::before {
+  background-color:rgba(255, 255, 255, 0.30);
 }
 
 .services-title {
@@ -364,6 +390,7 @@ body {
 }
 
 .breadcrumbs-link-main {
+  position: relative;
   display: inline-block;
   background-image:  url("../images/icons/breadcrumbs-home.svg");
   background-size: auto;
@@ -371,7 +398,18 @@ body {
   background-position: center center;
   width: 12px;
   min-height: 21px;
-  margin-right: 10px;
+  margin-right: 27px;
+}
+
+.breadcrumbs-link-main::before {
+  content: "";
+  background-image:  url("../images/icons/breadcrumbs-arrow.svg");
+  position: absolute;
+  left: 100%;
+  margin-left: 10px;
+  top: 5px;
+  width: 7px;
+  height: 10px;
 }
 
 /*subscribe*/
@@ -669,12 +707,12 @@ body {
   margin-right: 8px;
 }
 
-.pagination-link:hover,
-.pagination-link:focus {
+.pagination-link:hover:not(.pagination-other),
+.pagination-link:focus:not(.pagination-other) {
   background-color: #68A2CA;
 }
 
-.pagination-link:active {
+.pagination-link:active:not(.pagination-other) {
   color:  rgba(255, 255, 255, 0.30);
 }
 
@@ -712,6 +750,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   margin: 0 auto;
+  cursor: pointer;
 }
 
 .button:hover,
@@ -837,6 +876,19 @@ body {
   justify-content: center;
 }
 
+.media-icon {
+  color: #83B3D3;
+}
+
+.media-icon:hover,
+.nedia-icon:focus {
+  color: #68A2CA;
+}
+
+.media-icon:active {
+  color: rgba(104, 162, 202, 0.3);
+}
+
 .contacts-phone {
   display: inline-block;
   color: #000000;
@@ -846,6 +898,22 @@ body {
   line-height: 40px;
   text-decoration: none;
   text-transform: uppercase;
+}
+
+.navigation-logo-image {
+  color: #000000;
+}
+
+.contacts-phone:hover,
+.contacts-phone:focus,
+.navigation-logo-image:hover,
+.navigation-logo-image:focus {
+  color: #756157;
+}
+
+.contacts-phone:active,
+.navigation-logo-image:active {
+  color: rgba(117, 97, 87, 0.30);
 }
 
 .contacts-academy {
