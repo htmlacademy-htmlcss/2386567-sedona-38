@@ -124,7 +124,9 @@ body {
   opacity: 50%;
 }
 
-.navigation-link::before {
+.navigation-link:hover::before,
+.navigation-link:focus::before,
+.navigation-link.current-page::before {
   content: "";
   position: absolute;
   height: 2px;
@@ -133,10 +135,6 @@ body {
   left: 16px;
   right: 16px;
 }
-
-/*.navigation-link::before :hover {
-  display: block;
-}*/
 
 .navigation-items-right {
   display: flex;
@@ -326,7 +324,7 @@ body {
   background-color:rgba(0, 0, 0, 0.30);
   bottom: -30px;
   left: 50%;
-  margin-left: -30px;
+  transform: translateX(-50%);
 }
 
 .advantages-description {
@@ -439,7 +437,7 @@ body {
   min-height: 21px;
 }
 
-.breadcrumbs-item::before {
+.breadcrumbs-item:not(:last-of-type)::before {
   content: "";
   background-image:  url("../images/icons/breadcrumbs-arrow.svg");
   position: absolute;
@@ -765,12 +763,12 @@ body {
   margin-right: 8px;
 }
 
-.pagination-link:hover:not(.pagination-other),
-.pagination-link:focus:not(.pagination-other) {
+.pagination-link:not(.pagination-current):not(.pagination-other):hover,
+.pagination-link:not(.pagination-current):not(.pagination-other):focus {
   background-color: #68A2CA;
 }
 
-.pagination-link:active:not(.pagination-other) {
+.pagination-link:not(.pagination-current):not(.pagination-other):active {
   color:  rgba(255, 255, 255, 0.30);
 }
 
