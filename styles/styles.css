@@ -572,7 +572,8 @@ body {
 }
 
 .search-label-checkbox,
-.search-label-radio {
+.search-label-radio,
+.search-price-label {
   position: relative;
 }
 
@@ -648,6 +649,8 @@ body {
   position: absolute;
   top: 12px;
   right: 20px;
+  color: rgba(0, 0, 0, 0.30);
+  text-transform: lowercase;
 }
 
 .search-options {
