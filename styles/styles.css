@@ -563,6 +563,14 @@ body {
   margin-left: 36px;
 }
 
+.search-label:hover {
+  opacity: 60%;
+}
+
+.search-label:active {
+  opacity: 30%;
+}
+
 .search-label-checkbox,
 .search-label-radio {
   position: relative;
@@ -580,7 +588,7 @@ body {
   transform: translateY(-50%);
 }
 
-.search-label-checkbox::after {
+.search-input[type="checkbox"]:checked + .search-label-checkbox::after{
   content: "";
   position: absolute;
   background-image: url(../images/icons/tick.svg);
@@ -603,7 +611,7 @@ body {
   transform: translateY(-50%);
 }
 
-.search-label-radio::after {
+.search-input[type="radio"]:checked + .search-label-radio::after {
   content: "";
   position: absolute;
   width: 10px;
