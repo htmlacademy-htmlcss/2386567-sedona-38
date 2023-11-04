@@ -63,15 +63,15 @@
               <ul class="search-options">
                 <li>
                   <input class="visually-hidden" type="checkbox" name="pool" id="pool" checked>
-                  <label class="search-label" for="pool">Бассейн</label>
+                  <label class="search-label search-label-checkbox" for="pool">Бассейн</label>
                 </li>
                 <li>
                   <input class="visually-hidden" type="checkbox" name="parking" id="parking" checked>
-                  <label class="search-label" for="parking">Парковка</label>
+                  <label class="search-label search-label-checkbox" for="parking">Парковка</label>
                 </li>
                 <li>
                   <input class="visually-hidden" type="checkbox" name="wifi" id="wifi">
-                  <label class="search-label" for="wifi">Wi-Fi</label>
+                  <label class="search-label search-label-checkbox" for="wifi">Wi-Fi</label>
                 </li>
               </ul>
             </fieldset>
@@ -80,24 +80,28 @@
               <ul class="search-options">
                 <li>
                   <input class="visually-hidden" type="radio" name="place-type" id="hotel" value="hotel" checked>
-                  <label class="search-label" for="hotel">Гостиница</label>
+                  <label class="search-label search-label-radio" for="hotel">Гостиница</label>
                 </li>
                 <li>
                   <input class="visually-hidden" type="radio" name="place-type" id="motel" value="motel">
-                  <label class="search-label" for="motel">Мотель</label>
+                  <label class="search-label search-label-radio" for="motel">Мотель</label>
                 </li>
                 <li>
                   <input class="visually-hidden" type="radio" name="place-type" id="apartment" value="apartment">
-                  <label class="search-label" for="apartment">Апартаменты</label>
+                  <label class="search-label search-label-radio" for="apartment">Апартаменты</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="search-list search-list-price">
               <legend class="search-title">Стоимость, ₽:</legend>
-                <label class="search-price-label" for="price-start">От</label>
-                <input class="search-input" placeholder="0" type="number" name="price-start" id="price-start" value="0">
-                <label class="search-price-label" for="price-end">До</label>
-                <input class="search-input" placeholder="10000" type="number" name="price-end" id="price-end" value="9000">
+                <label class="search-price-label">
+                  <input class="search-price-input" placeholder="0" type="number" name="price-start" id="price-start" value="0">
+                  <span class="search-price-tag">От</span>
+                </label>
+                <label class="search-price-label">
+                  <input class="search-price-input" placeholder="10000" type="number" name="price-end" id="price-end" value="9000">
+                  <span class="search-price-tag">До</span>
+                </label>
                 <input type="range" min="0" max="10000" step="1" value="75">
             </fieldset>
             <div class="search-form-buttons">

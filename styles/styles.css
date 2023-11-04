@@ -155,6 +155,10 @@ body {
   margin: 0;
 }
 
+.navigation-item-icons:last-of-type {
+  position: relative;
+}
+
 .navigation-link-icon-search {
   display: inline-block;
   margin: 0;
@@ -195,8 +199,8 @@ body {
   min-height: 20px;
   border-radius: 10px;
   position: absolute;
-  top: 11px;
-  right: 254px;
+  top: 10px;
+  right: 3px;
 }
 
 /*hero*/
@@ -489,6 +493,11 @@ body {
   background-color: #F2F2F2;
   border-width: 0;
   border-radius: 4px 0 0 4px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 12px 20px;
 }
 
 /*search*/
@@ -540,7 +549,10 @@ body {
   padding: 0;
   margin-left: auto;
   border: 0;
+  display: flex;
+  flex-wrap: wrap;
   align-self: flex-start;
+  justify-content: space-between;
 }
 
 .search-label {
@@ -548,12 +560,86 @@ body {
   font-size: 18px;
   font-weight: 400;
   line-height: 23px;
+  margin-left: 36px;
 }
 
-.search-input {
+.search-label-checkbox,
+.search-label-radio {
+  position: relative;
+}
+
+.search-label-checkbox::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 2px;
+  background-color: #ffffff;
+  left: -36px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-label-checkbox::after {
+  content: "";
+  position: absolute;
+  background-image: url(../images/icons/tick.svg);
+  width: 20px;
+  height: 19px;
+  left: -36px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-label-radio::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  left: -36px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-label-radio::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #3F5E72;
+  left: -31px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-price-input {
+  position: relative;
   width: 143px;
   margin: 0;
-  padding: 0;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 12px 20px;
+}
+
+.search-price-label:first-of-type .search-price-input {
+  border: 0;
+  border-radius: 4px 0 0 4px;
+}
+
+.search-price-label:last-of-type .search-price-input {
+  border: 0;
+  border-radius: 0 4px 4px 0;
+}
+
+.search-price-tag {
+  position: absolute;
+  top: 12px;
+  right: 20px;
 }
 
 .search-options {
@@ -586,6 +672,14 @@ body {
 }
 
 /*catalog*/
+
+.filter-select {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  padding: 14px 20px;
+}
 
 .catalog {
   padding: 70px;
