@@ -94,15 +94,28 @@
             </fieldset>
             <fieldset class="search-list search-list-price">
               <legend class="search-title">Стоимость, ₽:</legend>
-                <label class="search-price-label">
-                  <input class="search-price-input" placeholder="0" type="number" name="price-start" id="price-start" value="0">
-                  <span class="search-price-tag">От</span>
-                </label>
-                <label class="search-price-label">
-                  <input class="search-price-input" placeholder="10000" type="number" name="price-end" id="price-end" value="9000">
-                  <span class="search-price-tag">До</span>
-                </label>
-                <input type="range" min="0" max="10000" step="1" value="75">
+              <div class="search-list-price">
+                <div class="search-price-labels-inputs">
+                  <label class="search-price-label">
+                    <input class="search-price-input" placeholder="0" type="number" name="price-start" id="price-start" value="0">
+                    <span class="search-price-tag">От</span>
+                  </label>
+                  <label class="search-price-label">
+                    <input class="search-price-input" placeholder="10000" type="number" name="price-end" id="price-end" value="9000">
+                    <span class="search-price-tag">До</span>
+                  </label>
+                </div>
+                <div class="search-price-scale">
+                  <div class="search-price-bar">
+                    <button class="search-price-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену</span>
+                    </button>
+                    <button class="search-price-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </fieldset>
             <div class="search-form-buttons">
               <button class="button search-submit" type="submit">Применить</button>

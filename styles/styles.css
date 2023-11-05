@@ -14,6 +14,16 @@
   font-display: swap;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
 /*base*/
 *,
 *::before,
@@ -543,7 +553,8 @@ body {
   margin-right: 70px;
 }
 
-.search-list-price {
+.search-list-price,
+.search-price-labels-inputs {
   width: 288px;
   margin: 0;
   padding: 0;
@@ -589,8 +600,8 @@ body {
   transform: translateY(-50%);
 }
 
-.search-input[type="checkbox"]:focus + .search-label-checkbox::before,
-.search-input[type="radio"]:focus + .search-label-radio::before, {
+.search-input[type="checkbox"]:focus-within + .search-label-checkbox::before,
+.search-input[type="radio"]:focus-within + .search-label-radio::before, {
   border: 3px solid #83B3D3;
 }
 
@@ -629,13 +640,58 @@ body {
   transform: translateY(-50%);
 }
 
+.search-price-scale {
+  position: relative;
+  height: 4px;
+  margin-top: 36px;
+  background: rgba(255, 255, 255, 0.30);
+  width: 100%;
+}
+
+.search-price-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #ffffff;
+}
+
+.search-price-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toggle-min {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+
+.toggle-max {
+  top: 50%;
+  transform: translateY(-50%);
+  left: 200px;
+}
+
+.search-price-toggle:hover,
+.search-price-toggle:focus  {
+  background-color: #E5E5E5;
+}
+
+.search-price-toggle:active {
+  background-color: #82B3D3;
+}
+
 .search-price-input {
   position: relative;
   width: 143px;
   margin: 0;
   font-family: inherit;
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 24px;
   padding: 12px 20px;
 }
@@ -714,8 +770,10 @@ body {
   display: grid;
   margin: 0 auto;
   padding: 0;
+  padding-bottom: 40px;
   gap: 20px;
   grid-template-columns: repeat(3, 340px);
+  border-bottom: 1px solid #E6E6E6;
 }
 
 .hotels-title {
@@ -870,7 +928,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  margin-top: 80px;
+  margin-top: 40px;
 }
 
 .pagination-link {
