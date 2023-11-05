@@ -589,6 +589,11 @@ body {
   transform: translateY(-50%);
 }
 
+.search-input[type="checkbox"]:focus + .search-label-checkbox::before,
+.search-input[type="radio"]:focus + .search-label-radio::before, {
+  border: 3px solid #83B3D3;
+}
+
 .search-input[type="checkbox"]:checked + .search-label-checkbox::after{
   content: "";
   position: absolute;
