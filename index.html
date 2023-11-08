@@ -172,14 +172,15 @@
               <span class="window-check-message">На эти даты есть свободные номера. Пока есть.</span>
             <label class="window-search-label" for="adults">Взрослые:</label>
               <input class="window-search-input quantity-input" placeholder="0" type="number" name="adults" id="adults" value="2">
-            <label class="window-search-label kids-search-label" for="kids">Дети:
+            <div class="window-grid-cell">
+              <label class="window-search-label kids-search-label" for="kids">Дети:</label>
               <div class="kids-info">
                 <img src="images/icons/info.svg" alt="info">
                 <div class="popover-content">
                   Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
                 </div>
               </div>
-            </label>
+              </div>
               <input class="window-search-input quantity-input" placeholder="0" type="number" name="kids" id="kids" value="2">
             <button class="button window-search-button" type="submit">Найти</button>
           </form>

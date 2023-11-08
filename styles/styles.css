@@ -1280,6 +1280,13 @@ body {
   background-position: center right;
 }
 
+.window-grid-cell {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .kids-search-label {
   padding-left: 88px;
 }
