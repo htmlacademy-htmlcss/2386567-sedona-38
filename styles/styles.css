@@ -601,7 +601,7 @@ body {
 }
 
 .search-input[type="checkbox"]:focus-within + .search-label-checkbox::before,
-.search-input[type="radio"]:focus-within + .search-label-radio::before, {
+.search-input[type="radio"]:focus-within + .search-label-radio::before {
   border: 3px solid #83B3D3;
 }
 
@@ -1088,11 +1088,12 @@ body {
 }
 
 .window-search-button {
-  grid-column: 1/3;
+  grid-column: 1/5;
   width: 577px;
   padding: 18px 77px;
   font-size: 20px;
   line-height: 24px;
+  margin-top: 48px;
 }
 
 /*footer*/
@@ -1215,10 +1216,10 @@ body {
   cursor: pointer;
 }
 
-/*грид разбить на четыре колонки, посмотреть в дискорде и видосики из чата, ДОКОВЫРЯТЬ ОКНО ДО СОЗВОНА!!!*/
 .window-search-form {
   display: grid;
-  grid-template-columns: repeat (2, 1fr);
+  grid-template-columns: 137px 110px 220px 110px;
+  grid-template-rows: auto 48px auto 48px auto auto;
   margin: 0;
   padding: 0;
   margin-top: 64px;
@@ -1227,6 +1228,8 @@ body {
 .window-search-label {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: left;
   color:#000000;
   font-size: 20px;
   font-weight: 700;
@@ -1235,11 +1238,13 @@ body {
 }
 
 .window-check-message {
+  grid-column: 2/5;
   color:#000000;
   font-size: 16px;
   font-weight: 400;
   line-height: 21px;
   text-transform: none;
+  padding-left: 20px;
 }
 
 .error-message {
@@ -1257,23 +1262,62 @@ body {
 }
 
 .date-input {
+  grid-column: 2/5;
   width: 440px;
   padding: 12px 20px;
+  background-image: url(../images/icons/calendar.svg);
+  background-repeat: no-repeat;
+  background-position: center right;
 }
 
-.calendar-label {
+.kids-search-label {
+  padding-left: 88px;
+}
+
+.kids-info {
   position: relative;
-  grid-column: 1/3;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+  background-color: #83B3D3;
+  min-width: 20px;
+  min-height: 20px;
+  border-radius: 10px;
 }
 
-.calendar-label::before {
-  content: url(../images/icons/calendar.svg);
+.popover-content {
   position: absolute;
-  width: 16px;
-  height: 15px;
-  top: 14px;
-  right: 36px;
-  opacity: 30%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  box-sizing: border-box;
+  width: 256px;
+  padding: 15px 18px 18px 22px;
+  background-color:#333333;
+  border-radius: 10px;
+  box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.30);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: none;
+  top: 38px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.popover-content::before {
+  content: url(../images/icons/triangle.svg);
+  position: absolute;
+  height: 9px;
+  width: 19px;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .quantity-input {

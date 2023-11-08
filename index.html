@@ -165,24 +165,23 @@
           <!-- лейблы сделать отдельно от инпутов -->
           <h2 class="section-title section-title-left">Поиск гостиницы в Седоне</h2>
           <form class="window-search-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="window-search-label calendar-label">
-              Дата заезда:
+            <label class="window-search-label calendar-label" for="date-in">Дата заезда:</label>
               <input class="window-search-input date-input" placeholder="Укажите дату" type="text" name="date-in" id="date-in" value="27 апреля 2020">
               <span class="window-check-message error-message">Мы не можем отправить вас в прошлое.</span>
-            </label>
-            <label class="window-search-label calendar-label">
-              Дата выезда:
+            <label class="window-search-label calendar-label" for="date-out">Дата выезда:</label>
               <input class="window-search-input date-input" placeholder="Укажите дату" type="text" name="date-out" id="date-out" value="1 сентября 2021">
               <span class="window-check-message">На эти даты есть свободные номера. Пока есть.</span>
-            </label>
-            <label class="window-search-label">
-              Взрослые:
+            <label class="window-search-label" for="adults">Взрослые:</label>
               <input class="window-search-input quantity-input" placeholder="0" type="number" name="adults" id="adults" value="2">
+            <label class="window-search-label kids-search-label" for="kids">Дети:
+              <div class="kids-info">
+                <img src="images/icons/info.svg" alt="info">
+                <div class="popover-content">
+                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                </div>
+              </div>
             </label>
-            <label class="window-search-label">
-              Дети:
               <input class="window-search-input quantity-input" placeholder="0" type="number" name="kids" id="kids" value="2">
-            </label>
             <button class="button window-search-button" type="submit">Найти</button>
           </form>
         </section>
