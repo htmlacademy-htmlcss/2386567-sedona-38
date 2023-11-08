@@ -24,6 +24,12 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 /*base*/
 *,
 *::before,
@@ -832,6 +838,10 @@ body {
   border: 2px solid #E5E5E5;
   margin-left: auto;
   background-color: #FFFFFF;
+  background-image: url(../images/icons/arrow-down.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center right;
 }
 
 .hotels-item {
@@ -1322,5 +1332,5 @@ body {
 
 .quantity-input {
   width: 110px;
-  padding: 14px 10px;
+  padding: 10px 50px;
 }
