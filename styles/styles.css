@@ -682,13 +682,8 @@ body {
   left: 200px;
 }
 
-.search-price-toggle:hover,
-.search-price-toggle:focus  {
-  background-color: #E5E5E5;
-}
-
 .search-price-toggle:active {
-  background-color: #82B3D3;
+  border: 2px solid #82B3D3;
 }
 
 .search-price-input {
