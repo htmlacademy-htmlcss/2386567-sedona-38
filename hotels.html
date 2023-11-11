@@ -5,10 +5,13 @@
     <title>Гостиницы Седоны</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
   </head>
   <body>
     <div class="page-container">
+
+<!-- header -->
+
       <header class="page-header">
         <nav class="navigation">
           <a class="navigation-logo" href="index.html">
@@ -28,14 +31,14 @@
           <div class="navigation-items-right">
             <ul class="navigation-user">
               <li class="navigation-item-icons">
-                <a class="navigation-link-icon-search" href=#>
+                <a class="navigation-icon-search" href=#>
                   <span class="visually-hidden">Поиск</span>
                 </a>
               </li>
               <li class="navigation-item-icons">
-                <a class="navigation-link-icon-featured" href=#>
+                <a class="navigation-icon-featured" href=#>
                   <span class="visually-hidden">Избранное</span>
-                  <span class="count">12</span>
+                  <span class="hotels-featured-count">12</span>
                 </a>
               </li>
             </ul>
@@ -43,6 +46,9 @@
           </div>
         </nav>
       </header>
+
+<!-- main -->
+
       <main class="main-inner">
         <section class="search">
           <header class="inner-header">
@@ -59,6 +65,9 @@
             </ul>
           </header>
           <h2 class="visually-hidden">Параметры поиска</h2>
+
+<!-- search form -->
+
           <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
             <fieldset class="search-list search-list-check">
               <legend class="search-title">Инфраструктура:</legend>
@@ -125,6 +134,9 @@
             </div>
           </form>
         </section>
+
+<!-- catalog -->
+
         <section class="catalog">
           <div class="catalog-filter">
             <h2 class="section-title section-title-left">Найдено гостиниц: 38</h2>
@@ -281,6 +293,9 @@
           </form>
         </section>
       </main>
+
+<!-- footer -->
+
       <footer class="page-footer">
         <div class="footer-container">
           <ul class="contacts-media">
