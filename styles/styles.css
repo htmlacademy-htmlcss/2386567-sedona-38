@@ -32,11 +32,6 @@ input[type="number"] {
   appearance: none;
 }
 
-input:hover,
-input:focus {
-  background-color: #E6E6E6;
-}
-
 img {
   max-width: 100%;
   object-fit: contain;
@@ -124,7 +119,7 @@ body {
   cursor: pointer;
 }
 
-/* ------------------------- buttons-common-properties-interactive ------------------------- */
+/* ------------------------- buttons-common-properties-interactive + inputs-interactive ------------------------- */
 
 .button:hover,
 .button:focus {
@@ -163,6 +158,15 @@ body {
 .search-submit:focus,
 .window-search-button:focus {
   background-color: #68A2CA;
+}
+
+.subscribe-input:hover,
+.search-price-input:hover,
+.window-search-input:hover,
+.subscribe-input:focus,
+.search-price-input:focus,
+.window-search-input:focus {
+  background-color: #E6E6E6;
 }
 
 /* ------------------------- navigation ------------------------- */
@@ -1168,16 +1172,17 @@ body {
 }
 
 .media-link {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   margin: 0 auto;
   padding: 10px;
 }
 
 .media-icon {
   color: #83B3D3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
 }
 
 .contacts-phone {
