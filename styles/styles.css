@@ -1393,8 +1393,8 @@ body {
   top: -16px;
   left: 50%;
   transform: translateX(-50%);
-  height: 9px;
   width: 19px;
+  height: 9px;
 }
 
 .quantity-input {
