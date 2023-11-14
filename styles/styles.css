@@ -319,12 +319,12 @@ body {
 
 .hero-title {
   width: 100% auto;
-  height: 485px;
+  min-height: 485px;
   padding-top: 51px;
   color: #000000;
   background-color: #4D636E;
   background-image: url("../images/index-background-mask.svg"), url("../images/index-background.jpg");
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center bottom;
 }
